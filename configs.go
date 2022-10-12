@@ -2341,10 +2341,10 @@ func (config DeleteMyCommandsConfig) params() (Params, error) {
 // SetChatMenuButtonConfig changes the bot's menu button in a private chat,
 // or the default menu button.
 type SetChatMenuButtonConfig struct {
-	ChatID          int64
-	ChannelUsername string
+	ChatID          int64  `json:"chat_id"`
+	ChannelUsername string `json:"channel_username"`
 
-	MenuButton *MenuButton
+	MenuButton *MenuButton `json:"menu_button"`
 }
 
 func (config SetChatMenuButtonConfig) method() string {
